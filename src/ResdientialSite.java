@@ -8,15 +8,11 @@ public class ResdientialSite extends Site {
         RS_rate = rate;
     }
 
-    public double getBillableAmount() {
-        return getBaseAmount() + getTaxAmount();
-    }
-
-    private double getBaseAmount() {
+    protected double getBaseAmount() {
         return RS_units * RS_rate;
     }
 
-    private double getTaxAmount() {
+    protected double getTaxAmount() {
         return getBaseAmount() * Site.TAX_RATE;
     }
 }
