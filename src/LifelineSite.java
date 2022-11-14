@@ -1,10 +1,11 @@
 public class LifelineSite extends Site {
 
-    private double base;
-    private double tax;
+    private double _units;
+    private double _rate;
 
-    public LifelineSite() {
-
+    public LifelineSite(double units, double rate) {
+        _units = units;
+        _rate = rate;
     }
 
     public double getBillableAmount() {
