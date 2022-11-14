@@ -9,8 +9,14 @@ public class ResdientialSite extends Site {
     }
 
     public double getBillableAmount() {
-        double base = RS_units * RS_rate;
-        double tax = base * Site.TAX_RATE;
-        return base + tax;
+        return base() + tax();
+    }
+
+    private double base() {
+        return RS_units * RS_rate;
+    }
+
+    private double tax() {
+        return base() * Site.TAX_RATE;
     }
 }
